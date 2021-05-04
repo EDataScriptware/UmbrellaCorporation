@@ -1,6 +1,6 @@
 <img src="https://static.wikia.nocookie.net/residentevil/images/5/50/UmbrellaCorporation3.png" width="125" height="125">
 
-# (WIP) Umbrella Corporation 
+# (WIP) Umbrella Corporation CRUD Application
 
 ## Description
 A CRUD application for employees and soon expansion on projects such as biological viruses (T-Virus), artificial intelligence project (Red Queen), humanoid project (Alexia Ashford) and other similar projects to be reviewed. In a reference and inspiration to the Resident Evil franchise by CAPCOM.
