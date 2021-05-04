@@ -1,11 +1,11 @@
 import databaseAPI
 
 def getRoutes(app):
-    @app.route('/getAllEmployees', methods=['GET'])
+    @app.route('/employees', methods=['GET'])
     def getEmployees():
         return str(databaseAPI.getAllEmployees())
 
-    @app.route('/getSpecificEmployee/<identification>', methods=['GET'])
+    @app.route('/employee/<identification>', methods=['GET'])
     def getSpecificEmployee(identification):
         return str(databaseAPI.getSpecificEmployee(identification))
 
