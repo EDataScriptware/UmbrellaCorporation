@@ -13,15 +13,15 @@ A CRUD application for employees and soon expansion on projects such as biologic
 - Frontend Framework: Vue.js, React.js, OR AngularJS _(Currently, debating amongst myself.)_
 
 
-## Current To-Do List (As of May 04, 2021)
+## Current To-Do List (As of May 05, 2021)
 
 - [x] Set up MySQL
 - [x] Create basic database design layout
 - [x] Set up Flask
 - [x] Set up GET RESTful methods
-- [ ] Set up POST RESTful method
+- [x] Set up POST RESTful method
 - [ ] Set up PUT RESTful method
-- [ ] Set up DELETE RESTful method
+- [x] Set up DELETE RESTful method
 - [ ] Expand database design layout (fill in other tables)
 - [ ] Lay out JOIN statements. 
 - [ ] Pick and start on frontend framework. 
