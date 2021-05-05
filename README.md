@@ -3,7 +3,7 @@
 # (WIP) Umbrella Corporation CRUD Application
 
 ## Description
-A CRUD application for employees and soon expansion on projects such as biological viruses (T-Virus), artificial intelligence project (Red Queen), humanoid project (Alexia Ashford) and other similar projects to be reviewed. In a reference and inspiration to the Resident Evil franchise by CAPCOM.
+*Project started on May 04, 2021.* A CRUD application for employees and soon expansion on projects such as biological viruses (T-Virus), artificial intelligence project (Red Queen), humanoid project (Alexia Ashford) and other similar projects to be reviewed. In a reference and inspiration to the Resident Evil franchise by CAPCOM. 
 
 
 ## Current Stack Development
@@ -11,7 +11,6 @@ A CRUD application for employees and soon expansion on projects such as biologic
 - Web Framework: Python Flask
 - Database Storage: MySQL 8.0.23
 - Frontend Framework: Vue.js, React.js, OR AngularJS _(Currently, debating amongst myself.)_
-
 
 ## Current To-Do List (As of May 05, 2021)
 
