@@ -19,9 +19,9 @@
 - [x] Set up Flask
 - [x] Set up GET RESTful methods
 - [x] Set up POST RESTful method
-- [ ] Set up PUT RESTful method
+- [x] Set up PUT RESTful method
 - [x] Set up DELETE RESTful method
-- [ ] Expand database design layout (fill in other tables)
+- [ ] Expand database design layout (fill in clearance and salary)
 - [ ] Set up table constraints
 - [ ] Lay out JOIN statements. 
 - [ ] Pick and start on frontend framework. 

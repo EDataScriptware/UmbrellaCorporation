@@ -1,4 +1,6 @@
 from services import databaseAPI
+import json
+from flask import jsonify, request, Flask
 
 def getDepartmentRoutes(app):
     @app.route('/departments', methods=['GET'])
@@ -14,6 +16,14 @@ def getDepartmentRoutes(app):
         databaseAPI.populateDepartments()
         return("Department Table populated.")
 
+    @app.route('/department', methods=['POST'])
+    def createDepartment():
+        record = json.loads(request.data)
+
+        databaseAPI.createDepartment(record)
+        return(str("Department " + str(record['dept_name']) + " has been successfully entered."))
+
+
     @app.route('/department/<identification>', methods=['DELETE'])
     def deleteDepartment(identification):
         databaseAPI.deleteDepartment(identification)
@@ -24,3 +34,9 @@ def getDepartmentRoutes(app):
         databaseAPI.deleteDepartments()
         return("Department Table wiped.")
 
+    @app.route('/department/<identification>', methods=['PUT'])
+    def updateDepartment(identification):
+        record = json.loads(request.data)
+        databaseAPI.updateDepartment(identification, record)
+
+        return(str("Department " + str(record['dept_name']) + " has been successfully updated."))

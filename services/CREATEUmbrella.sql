@@ -60,7 +60,7 @@ DROP TABLE IF EXISTS `umbrella`.`employee` ;
 CREATE TABLE IF NOT EXISTS `umbrella`.`employee` (
   `emp_id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(75) NOT NULL,
-  `middle_name` VARCHAR(75) NOT NULL,
+  `middle_name` VARCHAR(75) NULL,
   `last_name` VARCHAR(75) NOT NULL,
   `birth_date` DATE NOT NULL,
   `job` VARCHAR(30) NOT NULL,
