@@ -1,6 +1,6 @@
-import databaseAPI
+from services import databaseAPI
 
-def getRoutes(app):
+def getEmployeeRoutes(app):
     @app.route('/employees', methods=['GET'])
     def getEmployees():
         return str(databaseAPI.getAllEmployees())
@@ -12,7 +12,7 @@ def getRoutes(app):
     @app.route('/employees', methods=['POST'])
     def populateEmployees():
         databaseAPI.populateEmployees()
-        return("Database populated.")
+        return("Employee Table populated.")
 
     @app.route('/employee/<identification>', methods=['DELETE'])
     def deleteEmployee(identification):
@@ -22,4 +22,4 @@ def getRoutes(app):
     @app.route('/employees', methods=['DELETE'])
     def deleteEmployees():
         databaseAPI.deleteEmployees()
-        return("Employee table wiped.")
+        return("Employee Table wiped.")

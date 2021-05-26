@@ -29,12 +29,8 @@ DROP TABLE IF EXISTS `umbrella`.`clearance` ;
 CREATE TABLE IF NOT EXISTS `umbrella`.`clearance` (
   `clearance_id` INT NOT NULL AUTO_INCREMENT,
   `clearance_description` VARCHAR(25) NOT NULL,
-  PRIMARY KEY (`clearance_id`),
-  CONSTRAINT `clearance_id`
-    FOREIGN KEY (`clearance_id`)
-    REFERENCES `umbrella`.`employee` (`clearance_level`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`clearance_id`)
+  )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -50,12 +46,7 @@ CREATE TABLE IF NOT EXISTS `umbrella`.`department` (
   `dept_name` VARCHAR(45) NOT NULL,
   `dept_abb` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`dept_id`),
-  UNIQUE INDEX `dept_name_UNIQUE` (`dept_name` ASC) VISIBLE,
-  CONSTRAINT `department_code`
-    FOREIGN KEY (`dept_id`)
-    REFERENCES `umbrella`.`employee` (`department_code`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  UNIQUE INDEX `dept_name_UNIQUE` (`dept_name` ASC) VISIBLE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -97,12 +88,8 @@ CREATE TABLE IF NOT EXISTS `umbrella`.`salary` (
   `salary_id` INT NOT NULL AUTO_INCREMENT,
   `salary_desc` VARCHAR(45) NOT NULL,
   `salary_level` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`salary_id`),
-  CONSTRAINT `salary_code`
-    FOREIGN KEY (`salary_id`)
-    REFERENCES `umbrella`.`employee` (`salary_code`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`salary_id`)
+  )
 ENGINE = InnoDB;
 
 
