@@ -12,7 +12,7 @@
 - Database Storage: MySQL 8.0.23
 - Frontend Framework: Vue.js, React.js, OR AngularJS _(Currently, debating amongst myself.)_
 
-## Current To-Do List (As of May 05, 2021)
+## Current To-Do List (As of May 25, 2021)
 
 - [x] Set up MySQL
 - [x] Create basic database design layout
