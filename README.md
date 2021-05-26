@@ -22,6 +22,7 @@
 - [ ] Set up PUT RESTful method
 - [x] Set up DELETE RESTful method
 - [ ] Expand database design layout (fill in other tables)
+- [ ] Set up table constraints
 - [ ] Lay out JOIN statements. 
 - [ ] Pick and start on frontend framework. 
 - [ ] Create more database tables. 
