@@ -6,9 +6,11 @@ from flask_cors import CORS
 from routes.general import getRoutes
 from routes.employee import getEmployeeRoutes
 from routes.department import getDepartmentRoutes
+from flask_cors import CORS
 
 # Uses Flask
 app = Flask(__name__)
+CORS(app)
 
 # Sets up the routes
 getRoutes(app)
