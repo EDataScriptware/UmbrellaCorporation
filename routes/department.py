@@ -1,16 +1,19 @@
 from services import databaseAPI
+from business.jsonTransformer import selectQueryToJSON
 import json
 from flask import jsonify, request, Flask
 
 def getDepartmentRoutes(app):
     @app.route('/departments', methods=['GET'])
     def getDepartments():
-        return str(databaseAPI.getAllDepartment())
+        jsonObject = selectQueryToJSON(databaseAPI.getAllDepartment())
+        return jsonObject
 
     @app.route('/department/<identification>', methods=['GET'])
     def getSpecificDepartment(identification):
-        return str(databaseAPI.getSpecificDepartment(identification))
-
+        jsonObject = selectQueryToJSON(databaseAPI.getSpecificDepartment(identification))
+        return jsonObject
+        
     @app.route('/departments', methods=['POST'])
     def populateDepartments():
         databaseAPI.populateDepartments()

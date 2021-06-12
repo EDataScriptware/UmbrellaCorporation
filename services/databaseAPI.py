@@ -1,6 +1,7 @@
 import os
 import mysql
 import sqlalchemy as sql
+import json
 
 ip = os.environ["MYSQL_HOST"]
 username = os.environ["MYSQL_USERNAME"]
@@ -13,18 +14,13 @@ connection = engine.connect()
 ##### EMPLOYEES 
 ## GET
 def getAllEmployees():
-    result = connection.execute(sql.text("select * from employee"))
-    totalInformation = ""
-    for row in result:
-        totalInformation += str(row) + "\n"
-    return str(totalInformation)
+    sqlObject = connection.execute(sql.text("select * from employee"))
+    return sqlObject
 
 def getSpecificEmployee(id):
-    result = connection.execute(sql.text("SELECT * FROM employee WHERE emp_id = " + id))
-    totalInformation = ""
-    for row in result:
-        totalInformation += str(row) + "\n"
-    return str(totalInformation)
+    sqlObject = connection.execute(sql.text("SELECT * FROM employee WHERE emp_id = " + id))
+    return sqlObject
+
 
 ## POST
 def populateEmployees():
@@ -76,19 +72,12 @@ def updateEmployee(id, record):
 
 ## GET
 def getAllDepartment():
-    result = connection.execute(sql.text("select * from department"))
-    totalInformation = ""
-    for row in result:
-        totalInformation += str(row) + "\n"
-    return str(totalInformation)
+    sqlObject = connection.execute(sql.text("select * from department"))
+    return sqlObject
 
 def getSpecificDepartment(id):
-    result = connection.execute(sql.text("SELECT * FROM department WHERE dept_id = " + id))
-    totalInformation = ""
-    for row in result:
-        totalInformation += str(row) + "\n"
-    return str(totalInformation)
-
+    sqlObject = connection.execute(sql.text("SELECT * FROM department WHERE dept_id = " + id))
+    return sqlObject
 
 ## POST 
 def populateDepartments():

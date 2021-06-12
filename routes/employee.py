@@ -1,15 +1,18 @@
 from services import databaseAPI
+from business.jsonTransformer import selectQueryToJSON
 import json
 from flask import jsonify, request, Flask
 
 def getEmployeeRoutes(app):
     @app.route('/employees', methods=['GET'])
     def getEmployees():
-        return str(databaseAPI.getAllEmployees())
+        jsonObject = selectQueryToJSON(databaseAPI.getAllEmployees())
+        return jsonObject
 
     @app.route('/employee/<identification>', methods=['GET'])
     def getSpecificEmployee(identification):
-        return str(databaseAPI.getSpecificEmployee(identification))
+        jsonObject = selectQueryToJSON(databaseAPI.getSpecificEmployee(identification))
+        return jsonObject
 
     @app.route('/employees', methods=['POST'])
     def populateEmployees():
