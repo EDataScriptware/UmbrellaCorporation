@@ -1,47 +1,59 @@
-import React, {Component} from 'react'
+import React, {Component, Router, Route, useHistory} from 'react';
+import {Navbar, Nav} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css'
+import logo from '../src/media/img/logo.png'
+import raccoon_city from '../src/media/img/raccoon_city.jpeg'
+import '../src/index.css'
+import EmployeeComponent from "./components/employee.js"; 
 
-class App extends Component 
+class App extends Component
 {
-  state =
-  {
-    data : [],
-    isLoaded : false
-  }
 
-  async componentDidMount()
-  {
-  try 
-  {
-    const response = await fetch('http://127.0.0.1:5000/employees')
-    const data = await response.json()
-    console.log(data)
-    setTimeout(() => {
-      this.setState({ data: data.result, isLoaded : true})
-    }, 3000)
+render()
+{
+<Router>
+  <Route path="/" component={App}>
+    <Route path="employee" component={EmployeeComponent} />
+  </Route>
+</Router>
 
-  }
-  catch(err)
-  {
-    console.log(err)
-  }
+  
+  
+  return(
+  <div class='html'> 
+  <Navbar bg="dark" variant="dark">    
+      <Navbar.Brand>
+      <img
+        alt=""
+        src={logo}
+        width="35"
+        height="35"
+        className="d-inline-block align-top"
+      />{' '}
+            Umbrella Corporation{'  '} <i><quote>"Every business is life itself."</quote></i>
+      <Nav className="mr-auto">
+      <Nav.Link to="/" >Home</Nav.Link>
+      <Nav.Link to="/employee">Employees</Nav.Link>
+      <Nav.Link to="/department">Departments</Nav.Link>
+      <Nav.Link to="/history">History</Nav.Link>
+      </Nav>
+  </Navbar.Brand>
+  </Navbar>
+  <h1>Raccoon City is the heart of the Umbrella Corporation.</h1>
+  <img src={raccoon_city}></img>
+
+  
+
+  
+  
+  
+  </div>
+ 
+ 
+ 
+ )
+
 }
-
-  render(){
-    console.log('render method called')
-    const {data, isLoaded} = this.state;
-    return (
-    <div>
-      {!isLoaded ? <div>Loading...</div> :
-        <ul>
-        {data.map((item) => {
-          return <li key={item.emp_id}>{item.first_name} {item.last_name}</li>
-        })}
-        </ul>      
-      }
-    </div>
-    )
-  }
-
 }
 
 export default App
