@@ -10,9 +10,19 @@
 
 - Web Framework: Python Flask
 - Database Storage: MySQL 8.0.23
-- Frontend Framework: Vue.js, React.js, OR AngularJS _(Currently, debating amongst myself.)_
+- Frontend Framework: React.js, 
 
-## Current To-Do List (As of May 25, 2021)
+## Current Frontend To-Do List (As of June 16, 2021)
+- [X] Figure out how to use API Fetch
+- [ ] Master API Fetch
+- [X] Create a basic home page
+- [X] Add basic .css styling to basic home page
+- [ ] Start on Employees page
+- [ ] Start on Departments page
+- [ ] Start on History page
+- [ ] Prettyify the pages before moving on.
+
+## Current Backend To-Do List (As of May 25, 2021)
 
 - [x] Set up MySQL
 - [x] Create basic database design layout
@@ -24,7 +34,5 @@
 - [ ] Expand database design layout (fill in clearance and salary)
 - [ ] Set up table constraints
 - [ ] Lay out JOIN statements. 
-- [ ] Pick and start on frontend framework. 
 - [ ] Create more database tables. 
-- [ ] Revisit methods. 
 - [ ] Finalize touchings.
