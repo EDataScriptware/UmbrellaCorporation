@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Typography from '@material-ui/core/Typography';
 
 class App extends Component 
 {
@@ -17,7 +18,7 @@ class App extends Component
     console.log(data)
     setTimeout(() => {
       this.setState({ data: data.result, isLoaded : true})
-    }, 3000)
+    }, 500)
 
   }
   catch(err)
@@ -31,7 +32,11 @@ class App extends Component
     const {data, isLoaded} = this.state;
     return (
     <div>
+        <Typography variant="h2" align="center">
+				Employee Page 
+				</Typography>
       {!isLoaded ? <div>Loading...</div> :
+        
         <ul>
         {data.map((item) => {
           return <li key={item.emp_id}>{item.first_name} {item.last_name}</li>
