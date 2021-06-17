@@ -36,3 +36,6 @@
 - [ ] Lay out JOIN statements. 
 - [ ] Create more database tables. 
 - [ ] Finalize touchings.
+
+**Current website design:**
+![image](https://user-images.githubusercontent.com/55459510/122336754-edb6da80-cf02-11eb-8051-94649fa21c2f.png)
