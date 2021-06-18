@@ -6,7 +6,7 @@ import '../css/navbar.css';
 const Navbar = () => 
 {
 	return (
-        <div><div className='logo'>Umbrella Corporation <img src={logo} width='50'/> </div>
+        <div><div className='logo'>Umbrella Corporation <img src={logo} alt='logo' width='50'/> </div>
     <nav className="navbar">   
             <div className="links">
                 <Link to="/" >Home</Link>
