@@ -10,15 +10,20 @@
 
 - Web Framework: Python Flask
 - Database Storage: MySQL 8.0.23
-- Frontend Framework: React.js, 
+- Frontend Framework: React.js
+
+**Architecture**
+![image](https://user-images.githubusercontent.com/55459510/122632033-a3199780-d095-11eb-9633-5ccd17db0948.png)
+
+
 
 ## Current Frontend To-Do List (As of June 16, 2021)
 - [X] Figure out how to use API Fetch
 - [ ] Master API Fetch
 - [X] Create a basic home page
 - [X] Add basic .css styling to basic home page
-- [ ] Start on Employees page
-- [ ] Start on Departments page
+- [X] Start on Employees page
+- [X] Start on Departments page
 - [ ] Start on History page
 - [ ] Prettyify the pages before moving on.
 
