@@ -1,4 +1,9 @@
 .html, html
 {
- background-color: gray; 
+ background-color: white; 
+}
+
+.cardgroups
+{
+    margin-top: 2em;
 }

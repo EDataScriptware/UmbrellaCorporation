@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Typography from '@material-ui/core/Typography';
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 
 class App extends Component 
 {
@@ -28,20 +30,34 @@ class App extends Component
 }
 
   render(){
-    console.log('render method called')
     const {data, isLoaded} = this.state;
     return (
-    <div>
-        <Typography variant="h2" align="center">
+    <div className='employee'>
+        <Typography variant="h2" align="center" className='employee'>
 				Employee Page 
 				</Typography>
       {!isLoaded ? <div>Loading...</div> :
-        
-        <ul>
-        {data.map((item) => {
-          return <li key={item.emp_id}>{item.first_name} {item.last_name}</li>
-        })}
-        </ul>      
+          <div className='cardgroups'>
+           <CardDeck>
+          {data.map((item) => {
+
+            {var hireDate = new Date(item.hire_date).toLocaleDateString();}
+            
+            return <Card style={{ width: '18rem' }} className='card'>
+                <Card.Header> {item.job} </Card.Header>
+                <Card.Body>{item.first_name} {item.last_name} </Card.Body>
+                
+                
+
+                <Card.Footer>
+                  Hire Date: {hireDate}
+                </Card.Footer>
+
+             
+            </Card>
+          })}
+        </CardDeck>
+        </div>
       }
     </div>
     )
