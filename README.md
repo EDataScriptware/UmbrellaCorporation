@@ -18,7 +18,7 @@
 
 
 
-## Current Frontend To-Do List (As of June 16, 2021)
+## Current Frontend To-Do List (As of June 19, 2021)
 - [X] Figure out how to use API Fetch
 - [ ] Master API Fetch
 - [X] Create a basic home page
