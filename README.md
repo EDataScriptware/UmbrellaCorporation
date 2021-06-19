@@ -13,7 +13,8 @@
 - Frontend Framework: React.js
 
 **Architecture**
-![image](https://user-images.githubusercontent.com/55459510/122632033-a3199780-d095-11eb-9633-5ccd17db0948.png)
+
+<img src="https://user-images.githubusercontent.com/55459510/122632033-a3199780-d095-11eb-9633-5ccd17db0948.png" width="250">
 
 
 
