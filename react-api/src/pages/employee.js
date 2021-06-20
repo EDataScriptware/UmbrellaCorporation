@@ -41,11 +41,14 @@ class App extends Component
            <CardDeck>
           {data.map((item) => {
 
-            {var hireDate = new Date(item.hire_date).toLocaleDateString();}
-            
+            var hireDate = new Date(item.hire_date).toLocaleDateString();
+          
             return <Card style={{ width: '18rem' }} className='card'>
                 <Card.Header> {item.job} </Card.Header>
-                <Card.Body>{item.first_name} {item.last_name} </Card.Body>
+                <Card.Body>{item.first_name} {item.last_name}
+                </Card.Body>
+                
+                
                 
                 
 
