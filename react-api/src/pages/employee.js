@@ -48,10 +48,6 @@ class App extends Component
                 <Card.Body>{item.first_name} {item.last_name}
                 </Card.Body>
                 
-                
-                
-                
-
                 <Card.Footer>
                   Hire Date: {hireDate}
                 </Card.Footer>

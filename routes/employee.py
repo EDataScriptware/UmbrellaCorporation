@@ -14,6 +14,11 @@ def getEmployeeRoutes(app):
         jsonObject = selectQueryToJSON(databaseAPI.getSpecificEmployee(identification))
         return jsonObject
 
+    @app.route('/employee/department/<identification>', methods=['GET'])
+    def getEmployeeByDepartment(identification):
+        jsonObject = selectQueryToJSON(databaseAPI.getEmployeeByDepartment(identification))
+        return jsonObject
+
     @app.route('/employees', methods=['POST'])
     def populateEmployees():
         databaseAPI.populateEmployees()

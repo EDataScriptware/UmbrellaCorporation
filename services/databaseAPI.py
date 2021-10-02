@@ -22,6 +22,11 @@ def getSpecificEmployee(id):
     return sqlObject
 
 
+def getEmployeeByDepartment(id):
+    sqlObject = connection.execute(sql.text("SELECT * FROM employee WHERE department_code = " + id))
+    return sqlObject
+
+
 ## POST
 def populateEmployees():
     connection.execute(sql.text("INSERT INTO `umbrella`.`employee` (`first_name`, `last_name`,`birth_date`, `job`, `department_code`, `hire_date`, `clearance_level`, `address`, `city`, `salary_code`) VALUES ('William', 'Birkin', '1962-07-04', 'Virologist', '1', '1977-04-25', '1', '123 Police Department', 'Raccoon City', '7');"))
